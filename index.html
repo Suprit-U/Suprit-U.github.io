@@ -53,8 +53,8 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h2>Projects</h2>
 
 <div class="card">
-  <h3>ZTNA — Identity-Aware Zero Trust Gateway</h3>
-  <p>An identity-aware reverse proxy that verifies every HTTP/WebSocket request against identity, device posture and IP reputation. Google Gemini scores login events for anomaly detection, and high-risk sessions are auto-throttled by combining model output with access velocity and geographic variance. Basis of the IEEE paper, journal paper and patent below.</p>
+  <h3>ZTNA — Zero Trust Access Gateway</h3>
+  <p>OAuth 2.0 / PKCE authentication against Zitadel with role validation and country-based access control. Every successful login is scored by a weighted rule engine (off-hours +20, unapproved country +30, admin role +20, capped at 100), and an /analyze endpoint sends each login session to a locally hosted LLM for a one-paragraph risk summary. Basis of the IEEE paper, journal paper and patent below.</p>
   <div class="tech"><span>TypeScript</span><span>Bun</span><span>PostgreSQL</span><span>Docker</span><span>Zitadel IAM</span><span>OAuth 2.0 PKCE</span><span>Google Gemini</span></div>
   <div class="plinks"><a href="https://github.com/Suprit-U/ZTNA">Repository</a></div>
 </div>
@@ -85,6 +85,27 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   <p>Official Karnataka government-skills Android app with separate Admin and Candidate portals for course discovery, enrollment and certificate generation; offline-first Cloud Firestore persistence with real-time multi-device sync.</p>
   <div class="tech"><span>Kotlin</span><span>MVVM</span><span>Cloud Firestore</span></div>
   <div class="plinks"><a href="https://github.com/Suprit-U/Kaushalya-Karnataka">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>CiteKit — Verifiable RAG <span class="sub">· new</span></h3>
+  <p>A retrieval stack that refuses to bluff: hybrid BM25 + dense retrieval fused with reciprocal rank fusion, every answer carrying a citation marker, and five guardrails that abstain when the corpus does not support the question. Ships an evaluation harness — on its golden set it answers 7/7 answerable questions and correctly refuses 3/3 unanswerable ones (MRR@5 0.700, recall@5 0.667, ~1 ms per question). Zero dependencies, runs fully offline.</p>
+  <div class="tech"><span>Python</span><span>BM25</span><span>RRF</span><span>Guardrails</span><span>Evaluation harness</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/CiteKit">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>PulseWatch — Change Detection &amp; Alerts <span class="sub">· new</span></h3>
+  <p>Watches the pages that matter and stays quiet otherwise. Conditional GET with ETag/Last-Modified, token-level diffing, a noise floor that ignores reformatting, cooldown windows and change fingerprints for de-duplication, SQLite WAL state with migrations, and Telegram/webhook alerters behind a Prometheus-ready status API. A one-word change on a live page is caught in ~3 ms.</p>
+  <div class="tech"><span>Python</span><span>Conditional GET</span><span>SQLite</span><span>Alerting</span><span>FastAPI</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/PulseWatch">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>signlab-eval — Detection Evaluation &amp; Dataset QA <span class="sub">· new</span></h3>
+  <p>Object-detection work you can actually check. Seventeen dataset checks for YOLO format — missing and empty labels, class drift, tiny boxes, extreme aspect ratios, class imbalance, and train/val leakage detected by perceptual hashing — plus a pure-Python mAP@50 / mAP@50-95 implementation with a --fail-under gate for CI. Exit codes separate "the model regressed" from "the dataset is broken".</p>
+  <div class="tech"><span>Python</span><span>mAP@50</span><span>mAP@50-95</span><span>Dataset QA</span><span>CI gate</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/signlab-eval">Repository</a></div>
 </div>
 
 <h2>Publications, Patent &amp; Talks</h2>
@@ -123,6 +144,14 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <div class="item">
   <div class="t">Sai Vidya Institute of Technology, VTU — B.E. Computer Science and Engineering</div>
   <div class="d">2022 – 2026 · CGPA 9.12 / 10 · 0 backlogs</div>
+</div>
+
+<h2>Open Source</h2>
+
+<div class="item">
+  <div class="t">Pull request #3078 to marshmallow — “Fix Email validator accepting hyphens at the edges of the final domain label”</div>
+  <div class="d">The final label of <code>DOMAIN_REGEX</code> allowed a leading or trailing hyphen and was not length-capped; non-final labels were already correct. Reproduced on 4.3.1, fixed so punycode TLDs stay valid, covered by new regression tests. Full suite passes with the fix; exactly the three new cases fail without it.</div>
+  <div class="plinks"><a href="https://github.com/marshmallow-code/marshmallow/pull/3078">Pull request</a></div>
 </div>
 
 <h2>Certifications</h2>
