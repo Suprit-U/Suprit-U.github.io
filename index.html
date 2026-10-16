@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suprit U — Backend &amp; AI Engineer</title>
+<meta name="description" content="Suprit U — Backend and AI engineer in Bengaluru. Zero Trust security, real-time systems, computer vision. IEEE author, patent co-inventor.">
+<style>
+:root{--bg:#0b1120;--card:#111a2e;--line:#1e2a44;--tx:#e6edf7;--mut:#94a3b8;--acc:#38bdf8;--acc2:#a78bfa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header h1{font-size:2.1rem;letter-spacing:-.02em}
+header .tag{color:var(--acc2);font-weight:600;margin-top:6px}
+header p.bio{color:var(--mut);margin-top:12px;max-width:640px}
+.links{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.links a{border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:8px;font-size:.9rem}
+.links a:hover{border-color:var(--acc);text-decoration:none}
+h2{font-size:1.15rem;margin:52px 0 18px;letter-spacing:.04em;text-transform:uppercase;color:var(--acc2);border-bottom:1px solid var(--line);padding-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:14px}
+.card h3{font-size:1.05rem}
+.card h3 .sub{color:var(--mut);font-weight:400;font-size:.85rem}
+.card p{color:var(--mut);font-size:.92rem;margin-top:8px}
+.tech{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.tech span{font-size:.75rem;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.plinks{margin-top:10px;display:flex;gap:14px;font-size:.88rem;font-weight:600}
+.item{border-left:2px solid var(--acc);padding:2px 0 2px 16px;margin-bottom:16px}
+.item .t{font-weight:600}
+.item .d{color:var(--mut);font-size:.92rem;margin-top:2px}
+.skill{margin-bottom:10px;font-size:.92rem}
+.skill b{color:var(--tx)}
+.skill span{color:var(--mut)}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}
+@media(max-width:600px){.wrap{padding:36px 16px}header h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Suprit U</h1>
+  <div class="tag">Backend &amp; AI Engineer</div>
+  <p class="bio">B.E. Computer Science, VTU (CGPA 9.12) · Bengaluru, India. I build secure infrastructure, real-time systems and computer-vision pipelines — with an IEEE publication, a journal paper and an Indian patent application behind the Zero Trust gateway below.</p>
+  <div class="links">
+    <a href="mailto:supritu4@gmail.com">supritu4@gmail.com</a>
+    <a href="https://github.com/Suprit-U">GitHub</a>
+    <a href="https://linkedin.com/in/suprit-u">LinkedIn</a>
+  </div>
+</header>
+
+<h2>Projects</h2>
+
+<div class="card">
+  <h3>ZTNA — Identity-Aware Zero Trust Gateway</h3>
+  <p>An identity-aware reverse proxy that verifies every HTTP/WebSocket request against identity, device posture and IP reputation. Google Gemini scores login events for anomaly detection, and high-risk sessions are auto-throttled by combining model output with access velocity and geographic variance. Basis of the IEEE paper, journal paper and patent below.</p>
+  <div class="tech"><span>TypeScript</span><span>Bun</span><span>PostgreSQL</span><span>Docker</span><span>Zitadel IAM</span><span>OAuth 2.0 PKCE</span><span>Google Gemini</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/ZTNA">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>NexBoard — Real-Time Collaborative Canvas</h3>
+  <p>Distributed WebSocket server for multi-tenant canvas rooms — live cursors, an infinite Fabric.js canvas (shapes, freehand, pan/zoom, PNG export) and persistent chat &amp; presence backed by Appwrite. No account needed: join a room code and draw.</p>
+  <div class="tech"><span>React</span><span>TypeScript</span><span>Socket.IO</span><span>Fabric.js</span><span>Appwrite</span></div>
+  <div class="plinks"><a href="https://nex-board-xi.vercel.app">Live demo</a><a href="https://github.com/Suprit-U/NexBoard">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>Real-Time Traffic Sign Detection</h3>
+  <p>Custom YOLO detectors for multi-class traffic-sign recognition from video and live camera feeds, with an OpenCV inference pipeline featuring configurable resolutions and automatic CUDA-to-CPU fallback.</p>
+  <div class="tech"><span>Python</span><span>PyTorch</span><span>YOLOv8</span><span>OpenCV</span><span>CUDA</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/Real-Time-Traffic-Sign">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>Sanchalana — Multi-Tenant Web Platform</h3>
+  <p>Normalized PostgreSQL schemas with composite foreign keys, specialized indexes and transactional migrations; Row Level Security enforces tenant isolation and every payload is validated end-to-end with Zod.</p>
+  <div class="tech"><span>React 18</span><span>TypeScript</span><span>Vite</span><span>Supabase</span><span>PostgreSQL</span><span>Zod</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/Sanchalana">Repository</a></div>
+</div>
+
+<div class="card">
+  <h3>Kaushalya Karnataka — Government Skills Platform <span class="sub">· MindMatrix internship</span></h3>
+  <p>Official Karnataka government-skills Android app with separate Admin and Candidate portals for course discovery, enrollment and certificate generation; offline-first Cloud Firestore persistence with real-time multi-device sync.</p>
+  <div class="tech"><span>Kotlin</span><span>MVVM</span><span>Cloud Firestore</span></div>
+  <div class="plinks"><a href="https://github.com/Suprit-U/Kaushalya-Karnataka">Repository</a></div>
+</div>
+
+<h2>Publications, Patent &amp; Talks</h2>
+
+<div class="item">
+  <div class="t">Presented at IEEE GSEACT 2026 — “Next-Gen Secure Access Using Intelligent Zero Trust Network Architecture”</div>
+  <div class="d">12–13 June 2026 · DOI 10.1109/GSEACT68539.2026.11620242</div>
+</div>
+<div class="item">
+  <div class="t">Indian Patent Application 202541112150 A</div>
+  <div class="d">Published 5 Dec 2025 · one of seven inventors</div>
+</div>
+<div class="item">
+  <div class="t">International Journal of Novel Research and Development, Vol. 11 Issue 1</div>
+  <div class="d">Jan 2026 · Paper ID IJNRD2601087</div>
+</div>
+
+<h2>Experience</h2>
+
+<div class="item">
+  <div class="t">MindMatrix — Android Application Development Intern</div>
+  <div class="d">Bengaluru, India · Jan 2026 – June 2026 · developed the Kaushalya Karnataka government-skills app in Kotlin with MVVM and Cloud Firestore.</div>
+</div>
+
+<h2>Skills</h2>
+
+<div class="skill"><b>Languages:</b> <span>TypeScript, JavaScript (ES6+), Python, SQL, Kotlin, C++, Bash</span></div>
+<div class="skill"><b>Backend &amp; Real-Time:</b> <span>Node.js, Express, Flask, Socket.IO, WebSockets, REST APIs, OAuth 2.0 / PKCE, JWT, RBAC</span></div>
+<div class="skill"><b>Data &amp; Cloud:</b> <span>PostgreSQL, Supabase, Redis, MongoDB, Cloud Firestore, schema design, indexing, Row Level Security</span></div>
+<div class="skill"><b>ML &amp; Vision:</b> <span>PyTorch, YOLOv8, OpenCV, deep learning, object detection, NMS, CUDA</span></div>
+<div class="skill"><b>Frontend &amp; Mobile:</b> <span>React 18, Vite, Tailwind CSS, Radix UI, Fabric.js, Kotlin, MVVM</span></div>
+<div class="skill"><b>DevOps &amp; AI:</b> <span>Docker, Git, Linux / Bash, Postman, Selenium WebDriver, Google Gemini API, prompt engineering</span></div>
+
+<h2>Education</h2>
+
+<div class="item">
+  <div class="t">Sai Vidya Institute of Technology, VTU — B.E. Computer Science and Engineering</div>
+  <div class="d">2022 – 2026 · CGPA 9.12 / 10 · 0 backlogs</div>
+</div>
+
+<h2>Certifications</h2>
+
+<div class="item">
+  <div class="d">NPTEL Cloud Computing — 60.64/75 · NPTEL Introduction to Machine Learning — 43.11/75 · freeCodeCamp Machine Learning with Python (~300 hrs) · Google Cloud Generative AI Leader · IBM AI Fundamentals</div>
+</div>
+
+<footer>© 2026 Suprit U · <a href="mailto:supritu4@gmail.com">supritu4@gmail.com</a></footer>
+
+</div>
+</body>
+</html>
